@@ -1,5 +1,7 @@
 import { ComingSoonCountdown } from "@/components/coming-soon-countdown"
+import { RiInstagramLine, RiTiktokLine } from "@remixicon/react"
 import type { Metadata } from "next"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Segera hadir — Karimun Kemujan",
@@ -14,20 +16,43 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="container mx-auto grid max-h-[70rem] w-full grid-cols-1 items-center justify-center gap-10 pt-24 md:h-screen lg:grid-cols-2 lg:pt-0">
-      <header className="flex flex-col gap-4">
-        <h1 className="font-display text-[10rem] leading-[0.5] tracking-tight dark:text-white">
-          Karimun Kemujan
-        </h1>
-        <p className="mt-3 max-w-prose text-[clamp(0.9375rem,2.6vw,1.125rem)] leading-relaxed text-pretty sm:mt-4 sm:text-lg md:mt-5 md:text-xl dark:text-white/90">
-          Kami akan segera berlayar kembali.
-          <br /> Persiapkan diri — petualangan baru menanti di cakrawala.
-        </p>
-        <p className="mt-2 text-[clamp(0.8125rem,2.2vw,1rem)] sm:mt-3 dark:text-white/75">
-          Sampai jumpa di perairan baru,{" "}
-          <time dateTime="2026-06-20">20 Juni 2026</time>.
-        </p>
-      </header>
+    <div className="container mx-auto grid max-h-[70rem] w-full grid-cols-1 items-start justify-center gap-10 px-4 pt-8 sm:pt-24 md:h-screen lg:grid-cols-2">
+      <div className="flex flex-col items-start justify-between">
+        <header className="flex flex-col gap-4">
+          <Image
+            src="/images/logo/logo tim kkn.webp"
+            alt="Logo Tim KKN"
+            width={368}
+            height={971}
+            className="mb-4 h-20 w-fit invert sm:h-32 dark:invert-0"
+          />
+          <h1 className="font-display text-[30vw] leading-[0.5] tracking-tight text-primary sm:text-[20vw] lg:text-[10vw] dark:text-white">
+            Karimun Kemujan
+          </h1>
+          <p className="mt-3 max-w-prose text-[clamp(0.9375rem,2.6vw,1.125rem)] leading-relaxed text-pretty sm:mt-4 sm:text-lg md:mt-5 md:text-xl dark:text-white/90">
+            Kami akan segera berlayar kembali.
+            <br /> Persiapkan diri — petualangan baru menanti di cakrawala.
+          </p>
+          <p className="mt-2 text-[clamp(0.8125rem,2.2vw,1rem)] sm:mt-3 dark:text-white/75">
+            Sampai jumpa di perairan baru,{" "}
+            <time dateTime="2026-06-20">20 Juni 2026</time>.
+          </p>
+          <div className="flex gap-4">
+            <a
+              href="https://www.instagram.com/karimunkemujan"
+              aria-label="Instagram"
+            >
+              <RiInstagramLine className="h-6 w-6" />
+            </a>
+            <a
+              href="https://www.tiktok.com/@karimunkemujan2026"
+              aria-label="TikTok"
+            >
+              <RiTiktokLine className="h-6 w-6" />
+            </a>
+          </div>
+        </header>
+      </div>
 
       {/*<div className="mt-auto flex w-full min-w-0 flex-col gap-6 pt-10 sm:gap-8 sm:pt-12 md:gap-10 md:pt-16 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
           <div>
@@ -39,11 +64,8 @@ export default function Page() {
           </footer>
         </div>*/}
 
-      <div className="relative flex w-full items-center justify-center rounded bg-zinc-200 bg-[url('/images/bg/sasa.png')] object-cover p-3 lg:min-h-[650px] xl:min-h-[800px]">
-        <div
-          className="absolute inset-0 bg-linear-to-br from-black via-black/50 to-black"
-          aria-hidden
-        />
+      <div className="relative flex aspect-video w-full items-center justify-center rounded bg-zinc-200 bg-[url('/images/bg/sasa.png')] object-cover p-3 lg:aspect-auto lg:min-h-[650px] xl:min-h-[800px]">
+        <div className="absolute inset-0 bg-black/40" aria-hidden />
         <div>
           <ComingSoonCountdown />
         </div>

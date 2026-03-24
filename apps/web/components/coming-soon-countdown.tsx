@@ -15,7 +15,9 @@ function getParts(msLeft: number) {
 }
 
 export function ComingSoonCountdown() {
-  const [remainingMs, setRemainingMs] = useState(() => LAUNCH_AT_MS - Date.now())
+  const [remainingMs, setRemainingMs] = useState(
+    () => LAUNCH_AT_MS - Date.now()
+  )
 
   useEffect(() => {
     const id = window.setInterval(() => {
@@ -29,22 +31,22 @@ export function ComingSoonCountdown() {
 
   if (expired) {
     return (
-      <div className="w-full min-w-0 max-w-md text-end sm:max-w-lg">
-        <p className="text-pretty text-[clamp(0.8125rem,2.8vw,1rem)] leading-relaxed text-white/90">
-          Perjalanan baru sudah dimulai. Kami berlayar kembali — selamat datang di
-          perairan berikutnya.
+      <div className="w-full max-w-md min-w-0 text-end sm:max-w-lg">
+        <p className="text-[clamp(0.8125rem,2.8vw,1rem)] leading-relaxed text-pretty text-white/90">
+          Perjalanan baru sudah dimulai. Kami berlayar kembali — selamat datang
+          di perairan berikutnya.
         </p>
       </div>
     )
   }
 
   return (
-    <div className="flex w-full min-w-0 max-w-full flex-col items-end justify-center text-white">
+    <div className="flex w-full max-w-full min-w-0 flex-col items-end justify-center text-white">
       {/* Skiper-style block: fluid font size so one line fits xs→2xl; scroll fallback on ultra-narrow */}
       <div className="w-full max-w-[100vw] overflow-x-auto overflow-y-visible [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        <div className="inline-block min-w-min max-w-none px-1">
+        <div className="inline-block max-w-none min-w-min px-1">
           <div
-            className="font-bebas-neue tracking-tight text-white [font-size:clamp(2rem,calc(8vw+0.75rem),6.5rem)] sm:[font-size:clamp(2.5rem,calc(7vw+1rem),7.5rem)] lg:[font-size:clamp(3.25rem,calc(6vw+1.25rem),9rem)] xl:[font-size:clamp(3.5rem,calc(5.5vw+1.5rem),10rem)]"
+            className="font-bebas-neue [font-size:clamp(2rem,calc(8vw+0.75rem),6.5rem)] tracking-tight text-white sm:[font-size:clamp(2.5rem,calc(7vw+1rem),7.5rem)] lg:[font-size:clamp(3.25rem,calc(6vw+1.25rem),9rem)] xl:[font-size:clamp(3.5rem,calc(5.5vw+1.5rem),10rem)]"
             style={{ fontFeatureSettings: '"tnum"' }}
           >
             <NumberFlowGroup>

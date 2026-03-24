@@ -1,7 +1,7 @@
 "use client"
 
 import NumberFlow from "@number-flow/react"
-import { IconPlus } from "@tabler/icons-react"
+import { RiAddLine } from "@remixicon/react"
 import {
   animate,
   AnimatePresence,
@@ -9,7 +9,7 @@ import {
   useMotionValue,
   useSpring,
 } from "motion/react"
-import React, { useEffect, useRef, useState, useCallback } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { useInView } from "react-intersection-observer"
 
 const useVisible = () => {
@@ -133,7 +133,7 @@ const AnimatedNumber_001 = () => {
           onClick={handleReset}
           className="flex h-10 w-10 items-center justify-center rounded-full bg-white/45 text-[#ff3828] shadow-2xl transition-colors hover:bg-white/70"
         >
-          <IconPlus className="rotate-45" />
+          <RiAddLine className="rotate-45" />
         </button>
       </div>
     </div>
