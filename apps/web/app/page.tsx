@@ -16,9 +16,9 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="container mx-auto grid max-h-[70rem] w-full grid-cols-1 items-start justify-center gap-10 px-4 pt-8 sm:pt-24 md:h-screen lg:grid-cols-2">
-      <div className="flex flex-col items-start justify-between">
-        <header className="flex flex-col gap-4">
+    <div className="container mx-auto grid w-full grid-cols-1 items-start justify-center gap-10 px-4 pt-8 sm:py-24">
+      <div className="flex flex-col items-center justify-between">
+        <header className="flex flex-col items-center gap-4">
           <Image
             src="/images/logo/logo tim kkn.webp"
             alt="Logo Tim KKN"
@@ -26,16 +26,17 @@ export default function Page() {
             height={971}
             className="mb-4 h-20 w-fit invert sm:h-32 dark:invert-0"
           />
-          <h1 className="font-display text-[30vw] leading-[0.5] tracking-tight text-primary sm:text-[20vw] lg:text-[10vw] dark:text-white">
+          <h1 className="text-center font-display text-[30vw] leading-[0.5] tracking-tight text-primary sm:text-[20vw] lg:text-[10vw] dark:text-white">
             Karimun Kemujan
           </h1>
-          <p className="mt-3 max-w-prose text-[clamp(0.9375rem,2.6vw,1.125rem)] leading-relaxed text-pretty sm:mt-4 sm:text-lg md:mt-5 md:text-xl dark:text-white/90">
+          <p className="mt-3 max-w-prose text-center text-[clamp(0.9375rem,2.6vw,1.125rem)] leading-relaxed text-pretty sm:mt-4 sm:text-lg md:mt-5 md:text-xl dark:text-white/90">
             Kami akan segera berlayar kembali.
             <br /> Persiapkan diri — petualangan baru menanti di cakrawala.
           </p>
-          <p className="mt-2 text-[clamp(0.8125rem,2.2vw,1rem)] sm:mt-3 dark:text-white/75">
+          <p className="mt-2 text-center text-[clamp(0.8125rem,2.2vw,1rem)] sm:mt-3 dark:text-white/75">
             Sampai jumpa di perairan baru,{" "}
-            <time dateTime="2026-06-20">20 Juni 2026</time>.
+            <time dateTime="2026-06-20">20 Juni 2026</time>.<br /> Tim KKN-PPM
+            UGM Karimun Kemujan 2026
           </p>
           <div className="flex gap-4">
             <a
@@ -64,7 +65,7 @@ export default function Page() {
           </footer>
         </div>*/}
 
-      <div className="relative flex aspect-video w-full items-center justify-center rounded bg-zinc-200 bg-[url('/images/bg/sasa.png')] object-cover p-3 lg:aspect-auto lg:min-h-[650px] xl:min-h-[800px]">
+      <div className="center relative flex aspect-video w-full items-center justify-center rounded bg-zinc-200 bg-[url('/images/bg/sasa.png')] bg-cover bg-no-repeat p-3 lg:aspect-auto lg:min-h-[650px] xl:min-h-[800px]">
         <div className="absolute inset-0 bg-black/40" aria-hidden />
         <div>
           <ComingSoonCountdown />
