@@ -129,4 +129,7 @@
   .font-display {
     font-family: var(--font-display);
   }
+  .font-bebas-neue {
+    font-family: var(--font-bebas-neue), ui-sans-serif, system-ui, sans-serif;
+  }
 }
