@@ -46,11 +46,6 @@ export default function RootLayout({
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Reikna&display=swap"
-          rel="stylesheet"
-          crossOrigin="anonymous"
-        />
       </head>
       <body>
         <ThemeProvider>{children}</ThemeProvider>
