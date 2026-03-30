@@ -4,6 +4,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import "@workspace/ui/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+import { CSPostHogProvider } from "@/components/posthog-provider"
 import { cn } from "@workspace/ui/lib/utils"
 
 const fontSans = Geist({
@@ -48,7 +49,9 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <CSPostHogProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </CSPostHogProvider>
         <Analytics />
         <SpeedInsights />
       </body>
