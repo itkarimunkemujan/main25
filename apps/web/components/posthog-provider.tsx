@@ -33,11 +33,7 @@ function PostHogPageView() {
   return null
 }
 
-export function CSPostHogProvider({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export function CSPostHogProvider({ children }: { children: React.ReactNode }) {
   return (
     <PostHogProvider client={posthog}>
       <Suspense fallback={null}>

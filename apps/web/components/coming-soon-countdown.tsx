@@ -41,7 +41,7 @@ export function ComingSoonCountdown() {
   }
 
   return (
-    <div className="flex w-full max-w-full min-w-0 flex-col items-end justify-center text-white">
+    <div className="*:scroll-none flex w-full max-w-full min-w-0 flex-col items-end justify-center text-white *:select-none">
       {/* Skiper-style block: fluid font size so one line fits xs→2xl; scroll fallback on ultra-narrow */}
       <div className="w-full max-w-[100vw] overflow-x-auto overflow-y-visible [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
         <div className="inline-block max-w-none min-w-min px-1">
