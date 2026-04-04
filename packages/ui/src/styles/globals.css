@@ -140,4 +140,10 @@
   .font-bebas-neue {
     font-family: var(--font-bebas-neue), ui-sans-serif, system-ui, sans-serif;
   }
+  .maplibregl-popup-content {
+    @apply bg-transparent! shadow-none! p-0! rounded-none!;
+  }
+  .maplibregl-popup-tip {
+    @apply hidden!;
+  }
 }

@@ -19,7 +19,7 @@ export default function Page() {
   return (
     <div className="container mx-auto grid w-full grid-cols-1 items-start justify-center gap-10 px-4 pt-8 sm:py-24">
       <div className="flex flex-col items-center justify-between">
-        <header className="flex flex-col items-center gap-4">
+        <header className="flex flex-col items-center gap-4 *:select-none">
           <Image
             src="/images/logo/logo tim kkn.webp"
             alt="Logo Tim KKN"
@@ -43,12 +43,16 @@ export default function Page() {
             <a
               href="https://www.instagram.com/karimunkemujan"
               aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <RiInstagramLine className="h-6 w-6" />
             </a>
             <a
               href="https://www.tiktok.com/@karimunkemujan2026"
               aria-label="TikTok"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <RiTiktokLine className="h-6 w-6" />
             </a>
