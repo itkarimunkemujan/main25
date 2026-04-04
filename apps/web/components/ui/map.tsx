@@ -1374,9 +1374,9 @@ function MapClusterLayer<
       if (!features.length) return
 
       const feature = features[0]
-      const clusterId = feature.properties?.cluster_id as number
-      const pointCount = feature.properties?.point_count as number
-      const coordinates = (feature.geometry as GeoJSON.Point).coordinates as [
+      const clusterId = feature?.properties?.cluster_id as number
+      const pointCount = feature?.properties?.point_count as number
+      const coordinates = (feature?.geometry as GeoJSON.Point).coordinates as [
         number,
         number,
       ]
@@ -1404,7 +1404,7 @@ function MapClusterLayer<
 
       const feature = e.features[0]
       const coordinates = (
-        feature.geometry as GeoJSON.Point
+        feature?.geometry as GeoJSON.Point
       ).coordinates.slice() as [number, number]
 
       // Handle world copies
