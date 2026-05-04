@@ -6,6 +6,8 @@ import "@workspace/ui/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { CSPostHogProvider } from "@/components/posthog-provider"
 import { cn } from "@workspace/ui/lib/utils"
+import PillNav from "@/components/elements/pill-nav"
+import Navbar from "@/components/elements/navbar"
 
 const fontSans = Geist({
   subsets: ["latin"],
@@ -50,7 +52,10 @@ export default function RootLayout({
       </head>
       <body>
         <CSPostHogProvider>
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            <Navbar />
+            {children}
+          </ThemeProvider>
         </CSPostHogProvider>
         <Analytics />
         <SpeedInsights />

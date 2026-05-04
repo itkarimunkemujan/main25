@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <div className="container mx-auto grid w-full grid-cols-1 items-start justify-center gap-10 px-4 pt-8 sm:py-24">
+    <div className="container mx-auto grid w-full grid-cols-1 items-start justify-center gap-10 px-4 py-24">
       <div className="flex flex-col items-center justify-between">
         <header className="flex flex-col items-center gap-4 *:select-none">
           <Image
@@ -25,6 +25,7 @@ export default function Page() {
             alt="Logo Tim KKN"
             width={368}
             height={971}
+            loading="lazy"
             className="mb-4 h-20 w-fit invert sm:h-32 dark:invert-0"
           />
           <h1 className="text-center font-display text-[30vw] leading-[0.5] tracking-tight text-primary sm:text-[20vw] lg:text-[10vw] dark:text-white">
