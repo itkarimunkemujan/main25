@@ -1,5 +1,5 @@
 import { ComingSoonCountdown } from "@/components/coming-soon-countdown"
-import { BgImagePlayer } from "@/components/bg-image-player"
+import { BgVideoPlayer } from "@/components/bg-video-player"
 import { RiInstagramLine, RiTiktokLine } from "@remixicon/react"
 import type { Metadata } from "next"
 import Image from "next/image"
@@ -7,7 +7,7 @@ import Image from "next/image"
 export const metadata: Metadata = {
   title: "Segera hadir — Karimun Kemujan",
   description:
-    "Kami sedang menyiapkan sesuatu yang istimewa. Sampai jumpa di perairan baru pada 20 Juni 2026.",
+    "Kami sedang menyiapkan sesuatu yang istimewa. Sampai jumpa di perairan pada 20 Juni 2026.",
   openGraph: {
     title: "Segera hadir — Karimun Kemujan",
     description:
@@ -36,7 +36,7 @@ export default function Page() {
             <br /> Persiapkan diri — petualangan baru menanti di cakrawala.
           </p>
           <p className="mt-2 text-center text-[clamp(0.8125rem,2.2vw,1rem)] sm:mt-3 dark:text-white/75">
-            Sampai jumpa di perairan baru,{" "}
+            Sampai jumpa di perairan,{" "}
             <time dateTime="2026-06-20">20 Juni 2026</time>.<br /> Tim KKN-PPM
             UGM Karimun Kemujan 2026
           </p>
@@ -61,19 +61,9 @@ export default function Page() {
         </header>
       </div>
 
-      {/*<div className="mt-auto flex w-full min-w-0 flex-col gap-6 pt-10 sm:gap-8 sm:pt-12 md:gap-10 md:pt-16 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
-          <div>
-            <ComingSoonCountdown />
-          </div>
-
-          <footer className="max-w-prose shrink text-start text-[clamp(0.6875rem,2vw,0.8125rem)] leading-relaxed text-white/60 sm:max-w-xs md:max-w-sm">
-            <p>Tim KKN-PPM UGM Karimun Kemujan 2026</p>
-          </footer>
-        </div>*/}
-
-      <div className="center relative flex aspect-video w-full items-center justify-center rounded p-3 lg:aspect-auto lg:min-h-[650px] xl:min-h-[800px]">
+      <div className="center relative flex aspect-video w-full items-center justify-center rounded p-3 lg:min-h-[650px] xl:min-h-[800px]">
         <div className="absolute inset-0 -z-10">
-          <BgImagePlayer />
+          <BgVideoPlayer />
         </div>
         <div className="absolute inset-0 bg-black/40" aria-hidden />
         <div>

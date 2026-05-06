@@ -23,6 +23,7 @@ export function BgImagePlayer() {
           className="object-cover"
           alt="showcase"
           loading="eager"
+          sizes="100vw"
         />
       )}
     />
